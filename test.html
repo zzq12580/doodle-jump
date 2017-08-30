@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.con {
+			width: 50px;
+			height: 50px;
+			background-color: red;
+			position: absolute;
+			left: 100px;
+			top: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="con"></div>
+
+	<script>
+		var disX = 0;
+		var con = document.getElementsByClassName("con")[0];
+		window.addEventListener("devicemotion",function(e){
+			let motion = e.accelerationIncludingGravity;
+    		let x = Math.round(motion.x);
+    		
+    		disX += x;
+			con.style.transform = "translate3d("+disX+"px,0,0)";
+            
+		})
+	</script>
+</body>
+</html>

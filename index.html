@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+  <title>HTML5制作空间跳跃小游戏-xw素材网</title>
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+</head>
+
+<body>
+
+  <html lang="it-IT">
+<head>
+	<title>Space Jump</title>
+</head>
+<body>
+	<div class="container">
+		<canvas id="canvas">
+			Aww, il tuo browser non supporta HTML5!
+		</canvas>
+
+		<div id="mainMenu">
+			<h1>Space Jump</h1>
+			<h3>using HTML5,</h3>
+			<h3>...by Riccardo La Mantia</h3>
+      <h5>©2013</h5>
+
+			<!-- <p class="info">
+				Usa
+				<span class="key left">←</span>
+				<span class="key right">→</span>
+				per muoverti e spazio per iniziare.
+			</p> -->
+      <a class="button" href="javascript:init()">Play</a>
+		</div>
+
+		<div id="gameOverMenu">
+			<h1>Game Over!</h1>
+      <h4>You're dead! :) </h4>
+			<h3 id="go_score">You scored 0 points</h3>
+
+			<a class="button" href="javascript:reset()">Restart</a>
+
+		</div>
+
+		<!-- Preloading image ;) -->
+		<img id="sprite" src="http://i.imgur.com/2WEhF.png"/>
+
+		<div id="scoreBoard">
+			<p id="score">0</p>
+		</div>
+
+	</div>
+</body>
+</html>
+
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
