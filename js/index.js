@@ -249,7 +249,13 @@ function init() {
 		window.addEventListener("devicemotion",function(e){
 			let motion = e.accelerationIncludingGravity;
     		let x = Math.round(motion.x);
-    	
+    		
+    		if(x < 0) {
+    			dir = "left"
+    		}else {
+    			dir = "right"
+    		}
+
     		player.x += 0.001*x;
 			player.vx -= 0.15;
             
@@ -523,6 +529,11 @@ function playerJump() {
 		let motion = e.accelerationIncludingGravity;
 		let x = Math.round(motion.x);
 		
+		if(x < 0) {
+			dir = "left"
+		}else {
+			dir = "right"
+		}
 		player.x += 0.001*x;
 		player.vx -= 0.15;
         
